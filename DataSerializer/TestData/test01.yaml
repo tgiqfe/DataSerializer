@@ -1,0 +1,80 @@
+﻿- Name: サンプル1
+  Count: 201
+  DoubleCount: 6550000001
+  MultiStrings:
+  - aaaa
+  - bbbb
+  - cccc
+  StringList:
+  - dddd
+  - eeee
+  - ffff
+  Today: 2019-10-26T11:29:25.2888986+09:00
+  KeyVal:
+    Key1: Value1
+    Key2: Value2
+    Key3: Value3
+  Color: White
+  Inner:
+    Name: 内部クラス
+    Length: 50
+- Name: サンプル2
+  Count: 202
+  DoubleCount: 6550000002
+  MultiStrings:
+  - aaaa
+  - bbbb
+  - cccc
+  StringList:
+  - dddd
+  - eeee
+  - ffff
+  Today: 2019-10-26T11:29:25.2898965+09:00
+  KeyVal:
+    Key1: Value1
+    Key2: Value2
+    Key3: Value3
+  Color: Black
+  Inner:
+    Name: 内部クラス
+    Length: 50
+- Name: サンプル3
+  Count: 203
+  DoubleCount: 6550000003
+  MultiStrings:
+  - aaaa
+  - bbbb
+  - cccc
+  StringList:
+  - dddd
+  - eeee
+  - ffff
+  Today: 2019-10-26T11:29:25.2898965+09:00
+  KeyVal:
+    Key1: Value1
+    Key2: Value2
+    Key3: Value3
+  Color: CarbonBlack
+  Inner:
+    Name: 内部クラス
+    Length: 50
+- Name: サンプル4
+  Count: 204
+  DoubleCount: 6550000004
+  MultiStrings:
+  - aaaa
+  - bbbb
+  - cccc
+  StringList:
+  - dddd
+  - eeee
+  - ffff
+  Today: 2019-10-26T00:00:00.0000000+09:00
+  KeyVal:
+    Key1: Value1
+    Key2: Value2
+    Key3: Value3
+  Color: CarbonBlack
+  Inner:
+    Name: 内部クラス
+    Length: 50

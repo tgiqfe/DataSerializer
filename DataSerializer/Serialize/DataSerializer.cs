@@ -17,7 +17,7 @@ namespace DataSerializer
         /// <typeparam name="T"></typeparam>
         /// <param name="fileName"></param>
         /// <returns></returns>
-        public static T Deserialize<T>(string fileName) where T : class, new()
+        public static T Deserialize<T>(string fileName) where T : class
         {
             using (StreamReader sr = new StreamReader(fileName, Encoding.UTF8))
             {
@@ -34,7 +34,7 @@ namespace DataSerializer
         /// <param name="sourceText"></param>
         /// <param name="extension"></param>
         /// <returns></returns>
-        public static T Deserialize<T>(string sourceText, DataType extension) where T : class, new()
+        public static T Deserialize<T>(string sourceText, DataType extension) where T : class
         {
             using (StringReader sr = new StringReader(sourceText))
             {
@@ -49,19 +49,28 @@ namespace DataSerializer
         /// <param name="tr"></param>
         /// <param name="extension"></param>
         /// <returns></returns>
-        public static T Deserialize<T>(TextReader tr, DataType extension) where T : class, new()
+        public static T Deserialize<T>(TextReader tr, DataType extension) where T : class
         {
-            switch (extension)
+            try
             {
-                case DataType.Json:
-                    return JSON.Deserialize<T>(tr);
-                case DataType.Xml:
-                    return XML.Deserialize<T>(tr);
-                case DataType.Yml:
-                    return YML.Deserialize<T>(tr);
+                switch (extension)
+                {
+                    case DataType.Json:
+                        return JSON.Deserialize<T>(tr);
+                    case DataType.Xml:
+                        return XML.Deserialize<T>(tr);
+                    case DataType.Yml:
+                        return YML.Deserialize<T>(tr);
+                }
+            }
+            catch
+            {
+                //return new T();
+                //  ↑のようにする場合は、where T : new() が必要。
+                //  但し、この場合は配列を T として指定できなくなるので注意
+                return null;
             }
             return null;
-            //return new T();
         }
 
         #endregion
@@ -112,10 +121,13 @@ namespace DataSerializer
             switch (extension)
             {
                 case DataType.Json:
+                    JSON.Serialize<T>(obj, tw);
                     break;
                 case DataType.Xml:
+                    XML.Serialize<T>(obj, tw);
                     break;
                 case DataType.Yml:
+                    YML.Serialize<T>(obj, tw);
                     break;
             }
         }

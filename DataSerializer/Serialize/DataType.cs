@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataSerializer
 {
+    /// <summary>
+    /// データタイプ判別用enum
+    /// </summary>
     enum DataType
     {
         None = 0,
