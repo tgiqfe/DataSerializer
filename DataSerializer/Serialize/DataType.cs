@@ -9,7 +9,7 @@ namespace DataSerializer
     /// <summary>
     /// データタイプ判別用enum
     /// </summary>
-    enum DataType
+    internal enum DataType
     {
         None = 0,
         Json = 1,
