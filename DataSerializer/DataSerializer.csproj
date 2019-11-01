@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DictionaryExtensions.cs" />
     <Compile Include="SampleClass.cs" />
     <Compile Include="Serialize\DataType.cs" />
     <Compile Include="Serialize\DataSerializer.cs" />
