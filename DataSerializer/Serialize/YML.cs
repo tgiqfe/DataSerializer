@@ -9,7 +9,7 @@ using YamlDotNet.Serialization;
 
 namespace DataSerializer
 {
-    class YML
+    internal class YML
     {
         /// <summary>
         /// TextReaderからオブジェクトにデシリアライズ

@@ -10,7 +10,7 @@ using Newtonsoft.Json.Converters;
 
 namespace DataSerializer
 {
-    class JSON
+    internal class JSON
     {
         /// <summary>
         /// JsonConvert用デフォルト設定
