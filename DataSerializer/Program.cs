@@ -47,6 +47,15 @@ namespace DataSerializer
             testHash2["gggg"] = "test07";
             Console.WriteLine(testHash2.GetOrDefault("eeee", "test08"));
 
+            Dictionary<string, string> testHash3 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            testHash1["AAAA"] = "test01";
+            testHash1["bbbb"] = "test02";
+            testHash1["cccc"] = "test03";
+            Console.WriteLine(testHash1.GetOrDefault("aaaa", "nasi"));
+            testHash1.DeleteIfContains("aaaa");
+            Console.WriteLine(testHash1.GetOrDefault("aaaa", "nasi"));
+
+
             Console.ReadLine();
         }
     }
