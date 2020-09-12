@@ -35,7 +35,6 @@ namespace DataSerializer
             SampleClass[] instanceYML = DataSerializer.Deserialize<SampleClass[]>(testYML);
             Console.WriteLine(DataSerializer.Serialize<SampleClass[]>(instanceYML, DataType.Json));
 
-
             Dictionary<string, string> testHash1 = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
             testHash1["AAAA"] = "test01";
             testHash1["bbbb"] = "test02";
