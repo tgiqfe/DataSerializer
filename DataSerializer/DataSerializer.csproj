@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hnx8.ReadJEnc, Version=1.3.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReadJEnc.1.3.1.2\lib\net46\Hnx8.ReadJEnc.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -58,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialize\SerializableDictionary.cs" />
     <Compile Include="Serialize\XML.cs" />
+    <Compile Include="Serialize\IniFile.cs" />
     <Compile Include="Serialize\YML.cs" />
   </ItemGroup>
   <ItemGroup>

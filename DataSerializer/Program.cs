@@ -14,6 +14,7 @@ namespace DataSerializer
             string testXML = @"..\..\TestData\test01.xml";
             string testYML = @"..\..\TestData\test01.yml";
             string testYAML = @"..\..\TestData\test01.yaml";
+            string testINI = @"..\..\TestData\test01.ini";
 
             SampleClass[] samples = SampleClass.CreateClasses();
 
@@ -55,6 +56,25 @@ namespace DataSerializer
             testHash1.DeleteIfContains("aaaa");
             Console.WriteLine(testHash1.GetOrDefault("aaaa", "nasi"));
 
+            IniFile iniFile = new IniFile();
+            IniFile.Section section01 = new IniFile.Section();
+            IniFile.Section section02 = new IniFile.Section("AAAA");
+            IniFile.Section section03 = new IniFile.Section("BBBB");
+            section01.Entries["param1"] = "1";
+            section01.Entries["param2"] = "2";
+            section01.Entries["param3"] = "3";
+            section01.Entries["param4"] = "4";
+            section01.Entries["param5"] = "5";
+            section02.Entries["AAAA"] = "Sampe Parameter 01";
+            section02.Entries["BBBB"] = "Sampe Parameter 02";
+            section02.Entries["CCCC"] = "Sampe Parameter 03";
+            section03.Entries["1"] = "1234567890";
+            section03.Entries["2"] = "abcdefghij";
+            iniFile.SectionList.Add(section01);
+            iniFile.SectionList.Add(section02);
+            iniFile.SectionList.Add(section03);
+
+            iniFile.Save(testINI);
 
             Console.ReadLine();
         }
